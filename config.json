@@ -1,0 +1,33 @@
+{
+    "service": {
+        "execute": "C:\\Users\\fishzon\\PycharmProjects\\Auth.service.cpp\\ITest\\installDir\\auth_service\\bin\\auth_service.exe",
+        "config": "C:\\Users\\fishzon\\PycharmProjects\\Auth.service.cpp\\distro_config\\distro_all\\conf\\auth\\config.json",
+        "db": "C:\\Users\\fishzon\\PycharmProjects\\Auth.service.cpp\\ITest\\installDir\\auth_service\\var\\db\\bolid\\auth.db",
+        "port": 8000,
+        "paramKey": "/c"
+    },
+    "workDir": "workDir",
+    "data": {
+        "defaultUser": {
+            "name":     "admin",
+            "password": "c3000Hub"
+        },
+        "users": [
+            {
+                "name": "user1",
+                "password": "user1-user1",
+                "role": "operator"
+            },
+            {
+                "name": "user2",
+                "password": "user2-user2",
+                "role": "operator"
+            },
+            {
+                "name": "bolid-project",
+                "password":"123456654123",
+                "role": "service"
+            }
+        ]
+    }
+}

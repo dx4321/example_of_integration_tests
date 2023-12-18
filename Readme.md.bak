@@ -1,0 +1,43 @@
+Что-бы развернуть тест нужно перейти в папку ITest 
+cd C:\Users\fishzon\PycharmProjects\Auth.service.cpp\ITest\
+
+создать venv -> 
+C:\Users\fishzon\AppData\Local\Programs\Python\Python38\python.exe -m venv C:\Users\fishzon\PycharmProjects\Auth.service.cpp\ITest\venv
+
+активировать 
+.\venv\Scripts\activate
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# если надо обновить pip
+pip install --upgrade
+# с прокси
+pip install --upgrade pip --proxy http://<<<LOGIN>>>:<<<PASSWORD>>>@proxy.bolid.ru:3128
+
+# установить зависимости
+Установить зависимости
+pip install -r requirements.txt
+# с прокси
+Если нужно что-то установить через pip при этом использовать прокси ->
+pip install --proxy http://<<<LOGIN>>>:<<<PASSWORD>>>@proxy.bolid.ru:3128 -r requirements.txt
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Установить переменную окружения
+SET JSONRPC_ITEST_CONFIG=config.json - указываем имя конфига (по умолчанию лежит в ITest)
+
+Запускаем все тесты
+pytest 
+
+Параметры запуска
+-s - выводить принты :)
+--disable-pytest-warnings - отключить варнинги
+
+Пример
+pytest -s --disable-pytest-warnings
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++ Раздел в разработке +++
+Пропустить тест (пишем над тестом в коде)
+Что-бы пропустить тест используем декоратор для функции
+@pytest.mark.skip(reason="в настоящее время нет возможности проверить это")
+
+
+
